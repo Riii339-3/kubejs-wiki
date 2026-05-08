@@ -5,12 +5,17 @@ nav:
   - チュートリアル:
     - KubeJSのインストール: tutorials/install.md
     - 基礎知識: tutorials/basic.md
+    - 最初のアイテムを作成する: tutorials/first_item.md
+    - 最初のブロックを作成する: tutorials/first_block.md
+    - 最初の独自レシピを作成する: tutorials/first_recipe.md
   - アドオン解説: 
     - KubeJS Iron's Spells: 
       - 概要: addons/iss/index.md
       - 最初の魔法を作成する: addons/iss/first_magic.md
     - EntityJS:
       - 概要: addons/entityjs/index.md
+    - ProbeJS:
+      - 概要: addons/probejs/index.md
 
 markdown_extensions:
     - pymdownx.tilde:
