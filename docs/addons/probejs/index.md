@@ -1,0 +1,2 @@
+# ProbeJS
+VSCodeやその他IDEでKubeJSスクリプトを書くときに必須級と言われるアドオンです。
