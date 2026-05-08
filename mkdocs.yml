@@ -14,8 +14,15 @@ nav:
       - 最初の魔法を作成する: addons/iss/first_magic.md
     - EntityJS:
       - 概要: addons/entityjs/index.md
+      - EntityTypeの作成: addons/entityjs/entity_builder.md
     - ProbeJS:
       - 概要: addons/probejs/index.md
+    - KubeLoader:
+      - 概要: addons/kubeloader/index.md
+    - ClassJS:
+      - 概要: addons/classjs/index.md
+    - KubeJS Goety:
+      - 概要: addons/goety/index.md
 
 markdown_extensions:
     - pymdownx.tilde:
