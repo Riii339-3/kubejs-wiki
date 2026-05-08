@@ -41,11 +41,11 @@ KubeJSは名前の通り`JavaScript`という言語で記載します。
 初めてKubeJS入りマイクラを起動した際、インスタンスフォルダに`kubejs`というフォルダが生成されています。この中を除くと`assets`、`data`、`server_scripts`、`startup_scripts`、`client_script`…などが生成されていると思います。  
 assets、dataは主にリソパ・データパック関連ですのでおいておいて、ここでは3つのスクリプトについて説明します。
 
-1. StartupScripts: 
+- StartupScripts: 
 主にアイテム/ブロックの登録・編集などの**サーバー、クライアント双方が必須とする**ものを書きます。  
-2. ServerScripts: 
+- ServerScripts: 
 主にレシピの作成・編集など**サーバーサイドで必須**なものを書きます。  
-3. ClientScrips: 
+- ClientScrips: 
 主に…何に使うんでしょう？**クライアントサイドで必須**なものを書きます。  
 
 基本的に、当wikiでは記載されているスクリプトをどこに置けばをすべて書いておりますので、それに従って書いてください。
