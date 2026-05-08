@@ -1,0 +1,27 @@
+site_name: KubeJS 日本語Wiki (非公式)
+
+nav:
+  - ホーム: index.md
+  - チュートリアル:
+    - KubeJSのインストール: tutorials/install.md
+    - 基礎知識: tutorials/basic.md
+  - アドオン解説: 
+    - KubeJS Iron's Spells: 
+      - 概要: addons/iss/index.md
+      - 最初の魔法を作成する: addons/iss/first_magic.md
+
+markdown_extensions:
+    - pymdownx.tilde:
+    - pymdownx.caret:
+    - pymdownx.betterem:
+    - pymdownx.smartsymbols:
+    - pymdownx.escapeall:
+        hardbreak: True
+        nbsp: True
+    - pymdownx.mark:
+    - pymdownx.tabbed:
+    - pymdownx.superfences:
+        preserve_tabs: true
+    - pymdownx.snippets:
+        base_path: docs/
+    - pymdownx.details:
