@@ -9,6 +9,8 @@ nav:
     - KubeJS Iron's Spells: 
       - 概要: addons/iss/index.md
       - 最初の魔法を作成する: addons/iss/first_magic.md
+    - EntityJS:
+      - 概要: addons/entityjs/index.md
 
 markdown_extensions:
     - pymdownx.tilde:
