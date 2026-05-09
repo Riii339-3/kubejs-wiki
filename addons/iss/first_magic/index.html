@@ -241,7 +241,7 @@ StartupEvents.registry('irons_spellbooks:spells', event =&gt; {
 
 })</code></pre>
 これは自分自身を魔法レベル × 2分回復する魔法です。<br />
-このコードをStartupScriptsに置いて、マインクラフトを起動してください。そうすると、spell.kubejs.super_heal のスクロールがあると思います。<br />
+このコードをStartupScriptsに置いて、マインクラフトを起動してください。そうすると、spell.kubejs.super_heal のスクロールがあると思います。名前がおかしいのは大丈夫です、後々直します。<br />
 では、それぞれのメゾットを詳しく見ていきましょう。  </p>
 <h2 id="setcasttype">setCastType()</h2>
 <p>魔法の発動タイプを選択します。<br />
@@ -277,16 +277,16 @@ Componentを含んだArrayを返す必要があります。
 <strong>casterがnullの場合を考慮してください。</strong>魔法書に魔法を入れるときにnullになります。<br />
 <code>Component.blue(Text.translate("spell.riiimc.magic_info"))</code>このように記載することで、翻訳キーを入れることもできます。  </p>
 <h2 id="_4">仕上げ</h2>
-<p>さて、これで君だけのオリジナル魔法が動きます！しかし、名前が"spell.kubejs.spell_name"になっていることにお気づきでしょう。Modやデータパック、リソパの制作に携わったことのある方はご存知かもしれませんが、これは翻訳キーが書いてあります。そうです、最後に魔法の日本語名を決める必要があります。<br />
+<p>さて、これで君だけのオリジナル魔法が動きます！しかし、名前が"spell.kubejs.super_heal"になっていることにお気づきでしょう。Modやデータパック、リソパの制作に携わったことのある方はご存知かもしれませんが、これは翻訳キーが書いてあります。そうです、最後に魔法の日本語名を決める必要があります。<br />
 <code>assets</code>フォルダを開き、さらに<code>kubejs</code>フォルダを開いてください。中にtexturesフォルダがあると思いますがそれは気にせず、新たに<code>lang</code>フォルダを作成してください。そしてその中に<code>ja_jp.json</code>と<code>en_us.json</code>をそれぞれ作成してください。画像は後で貼ります。<br />
 <code>ja_jp.json</code>と<code>en_us.json</code>をそれぞれ開いてください。そして、以下のようにかいてください。<br />
 <code>assets/kubejs/lang/ja_jp.json</code><br />
 <pre class="highlight"><code class="language-json">{
-    "spell.kubejs.your_spell_id": "日本語での魔法名"
+    "spell.kubejs.super_heal": "すごいヒール"
 }</code></pre>
 <code>assets/kubejs/lang/en_us.json</code><br />
 <pre class="highlight"><code class="language-json">{
-    "spell.kubejs.your_spell_id": "英語での魔法名"
+    "spell.kubejs.super_heal": "Super Heal"
 }</code></pre>
 なぜ英語が必要か、それは英語がデフォルト言語だからです。もし使用者がフランス語でマイクラを起動した際、日本語だけだと翻訳キーが表示されてしまいます。しかし、英語も記載しておけば翻訳キーではなく<strong>英語での魔法名</strong>が表示されるのです。<br />
 さて、あとは魔法のアイコンだけです。<code>assets/kubejs/</code>を開き、先ほどスルーした<code>textures</code>を開いてください。おそらく<code>block</code>と<code>item</code>があります。今回はこの2つは関係ないので<code>gui</code>フォルダを作成し、その中にさらに<code>spell_icons</code>フォルダを作成します。そして、その中に<strong>魔法のidと全く同じpng形式の画像ファイル</strong>を置いてください。<br />
