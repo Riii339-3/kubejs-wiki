@@ -6,7 +6,7 @@
 ```js
 // StartupScripts
 StartupEvents.registry('irons_spellbooks:spells', event => {
-	event.create('heal')                          // 作成したい魔法のid(文字列表記/小文字英数字&ハイフン、アンダーアーマーのみ使用可)
+	event.create('super_heal')                          // 作成したい魔法のid(文字列表記/小文字英数字&ハイフン、アンダーアーマーのみ使用可)
 		.setCastTime(20)                           // 発動時間(tick表記)
 		.setCooldownSeconds(30)                    // クールタイム(秒表記)
         .setBaseManaCost(50)                       // 基本的なマナコスト(整数表記)
@@ -34,7 +34,7 @@ StartupEvents.registry('irons_spellbooks:spells', event => {
 })
 ```  
 これは自分自身を魔法レベル × 2分回復する魔法です。  
-このコードをStartupScriptsに置いて、マインクラフトを起動してください。そうすると、spell.kubejs.heal のスクロールがあると思います。  
+このコードをStartupScriptsに置いて、マインクラフトを起動してください。そうすると、spell.kubejs.super_heal のスクロールがあると思います。  
 では、それぞれのメゾットを詳しく見ていきましょう。  
 
 ## setCastType()
@@ -62,6 +62,12 @@ StartupEvents.registry('irons_spellbooks:spells', event => {
 - `ctx.spellLevel` = 発動した魔法のレベル  
 - `ctx.level` = 発動したlevel  
 …他にも絶対ありますが、私が知らないので覚えたら書きます。許して。  
+今回の魔法では、spellLevel × 2の体力を回復しています。詳しく見ていきましょう。  
+
+まず、`const entity = ctx.entity`で発動者を取得します。  
+次に、`if (!entity) return`で、**entityがnullの時を除外**します。nullチェックは大事。  
+最後に、`entity.heal(ctx.getSpellLevel() * 2)`でentityを回復します。`heal(number)`が回復部分で、引数に回復量を入れます。今回の場合、`getSpellLevel()`で取得した魔法レベルに2を掛けた値を入れています。  
+この部分は自由に書けます。例えば、`entity.potionEffects.add("minecraft:resistance", 200, ctx.getSpellLevel())`用に書けば、耐性を魔法レベル分**10秒間**付与します。`potionEffects.add()`の効果時間は**Tick**です。  
 
 ## setUniqueInfo()
 魔法の説明をツールチップに書きます。  
