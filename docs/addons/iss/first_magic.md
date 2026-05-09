@@ -6,7 +6,7 @@
 ```js
 // StartupScripts
 StartupEvents.registry('irons_spellbooks:spells', event => {
-	event.create('spark')                          // 作成したい魔法のid(文字列表記/小文字英数字&ハイフン、アンダーアーマーのみ使用可)
+	event.create('heal')                          // 作成したい魔法のid(文字列表記/小文字英数字&ハイフン、アンダーアーマーのみ使用可)
 		.setCastTime(20)                           // 発動時間(tick表記)
 		.setCooldownSeconds(30)                    // クールタイム(秒表記)
         .setBaseManaCost(50)                       // 基本的なマナコスト(整数表記)
@@ -17,20 +17,23 @@ StartupEvents.registry('irons_spellbooks:spells', event => {
 		.setMaxLevel(5)                            // 最大レベル(整数表記)
 		.setStartSound('item.honey_bottle.drink')  // 魔法を発動し始めた際に鳴らすサウンド。ロング魔法で使用(id表記)
 		.setFinishSound('item.honey_bottle.drink') // 魔法が発動し終わった際に鳴らすサウンド(id表記)
-		.onCast(ctx => {})                         // 魔法を発動した際に行うこと。主にここでコードを記載する。詳細は以下に記載。
+		.onCast(ctx => {
+			const entity = ctx.entity
+			if (!entity) return
+			entity.heal(ctx.getSpellLevel() * 2)
+		})                         // 魔法を発動した際に行うこと。主にここでコードを記載する。詳細は以下に記載。
 		.setAllowLooting(true)                     // 魔法がルートから出現するかどうか。trueで出現、falseでなし。
 		.needsLearning(false)                      // 魔法を学ぶ必要があるかどうか。エルドリッチ魔法専用。
 		.canBeCraftedBy(player => true)            // プレイヤーが魔法をクラフトできるかどうか。一定条件下においてクラフト可もできる。
 		.setUniqueInfo((spellLevel, caster) => {   // 魔法についての説明をツールチップに記載する。Arrayを返す(詳細は下記)
-			let blood_spell_power = caster ? caster.getAttributeValue("irons_spellbooks:blood_spell_power") : 1
-			let spell_power = caster ? caster.getAttributeValue("irons_spellbooks:spell_power") : 1
 			return [
-	 			Component.darkGreen(`効果時間: ${Math.floor(spellLevel * blood_spell_power * spell_power)} 秒`)
+	 			Component.darkGreen(`回復量: ${spellLevel * 2}`)
 			]
 		})
 
 })
 ```  
+これは自分自身を魔法レベル × 2分回復する魔法です。  
 このコードをStartupScriptsに置いて、マインクラフトを起動してください。そうすると、spell.kubejs.heal のスクロールがあると思います。  
 では、それぞれのメゾットを詳しく見ていきましょう。  
 
