@@ -91,6 +91,10 @@
 <li>
     <a href="./" class="dropdown-item active" aria-current="page">EntityTypeの作成</a>
 </li>
+            
+<li>
+    <a href="../iss_compat/" class="dropdown-item">Iron's Spellsとの連携</a>
+</li>
     </ul>
   </li>
                                     
@@ -149,7 +153,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../probejs/" class="nav-link">
+                                <a rel="next" href="../iss_compat/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -173,6 +177,14 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#entitytype" class="nav-link">EntityTypeの作成</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">はじめに</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#entitytype_1" class="nav-link">EntityTypeの種類</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -180,7 +192,21 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="entitytype">EntityTypeの作成</h1></div>
+<h1 id="entitytype">EntityTypeの作成</h1>
+<h2 id="_1">はじめに</h2>
+<p>著者も理解できてないです。助けて。<br />
+KubeJS Iron's Spellsとの連携については、<a href="../iss_compat/">こちら</a>をご覧ください。</p>
+<h2 id="entitytype_1">EntityTypeの種類</h2>
+<p>EntityJSが対応している種類は以下の通りです。<br />
+- <code>'entityjs:mob'</code>: PathfinderMob、つまり一般的なモブです。<br />
+- <code>"entityjs:animal"</code>: AnimalMob、つまり動物です。<br />
+- <code>"entityjs:tamable"</code>: TamableMob、つまり手懐けられるモブです。<br />
+- <code>""entityjs:watercreature""</code>: WaterMob、つまり海中にいるモブです。<br />
+- <code>"entityjs:arrow"</code>: ArrowEntity、つまり矢です。<br />
+- <code>"entityjs:projectile"</code>: ProjectileEntity、つまり飛翔体エンティティです。<br />
+- <code>"entityjs:geckolib_projectile"</code>: GeckoLibのモデルを持つ飛翔体エンティティです。  </p>
+<p>また、これら以外にも<code>"entityjs:nonliving"</code>と<code>'entityjs:living'</code>があります。これらはテンプレートに従っていない、完全新規のエンティティです。ただし、これらを扱うには高度な知識を求められます。<br />
+では、それぞれのエンティティについて見てみましょう。  </p></div>
             </div>
         </div>
 
