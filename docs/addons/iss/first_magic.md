@@ -1,6 +1,8 @@
 # 最初の魔法を作成する
 
-## 魔法作成のテンプレート
+## はじめに
+このセクションでは実際に動作するコードを紐解きながら、どのようにして魔法を作成しているかを解説していきます  
+## 実際のコード
 ```js
 // StartupScripts
 StartupEvents.registry('irons_spellbooks:spells', event => {
@@ -29,7 +31,8 @@ StartupEvents.registry('irons_spellbooks:spells', event => {
 
 })
 ```  
-以下に、上記で詳しく解説してないメゾットの解説を行う
+このコードをStartupScriptsに置いて、マインクラフトを起動してください。そうすると、spell.kubejs.heal のスクロールがあると思います。  
+では、それぞれのメゾットを詳しく見ていきましょう。  
 
 ## setCastType()
 魔法の発動タイプを選択します。  
