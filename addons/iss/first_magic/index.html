@@ -173,7 +173,11 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">最初の魔法を作成する</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">魔法作成のテンプレート</a>
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">はじめに</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">実際のコード</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -193,7 +197,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">仕上げ</a>
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">仕上げ</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -205,7 +209,9 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="_1">最初の魔法を作成する</h1>
-<h2 id="_2">魔法作成のテンプレート</h2>
+<h2 id="_2">はじめに</h2>
+<p>このセクションでは実際に動作するコードを紐解きながら、どのようにして魔法を作成しているかを解説していきます  </p>
+<h2 id="_3">実際のコード</h2>
 <p><pre class="highlight"><code class="language-js">// StartupScripts
 StartupEvents.registry('irons_spellbooks:spells', event =&gt; {
 	event.create('spark')                          // 作成したい魔法のid(文字列表記/小文字英数字&amp;ハイフン、アンダーアーマーのみ使用可)
@@ -232,7 +238,8 @@ StartupEvents.registry('irons_spellbooks:spells', event =&gt; {
 		})
 
 })</code></pre>
-以下に、上記で詳しく解説してないメゾットの解説を行う</p>
+このコードをStartupScriptsに置いて、マインクラフトを起動してください。そうすると、spell.kubejs.heal のスクロールがあると思います。<br />
+では、それぞれのメゾットを詳しく見ていきましょう。  </p>
 <h2 id="setcasttype">setCastType()</h2>
 <p>魔法の発動タイプを選択します。<br />
 以下のいずれかを選択する必要があります<br />
@@ -261,7 +268,7 @@ StartupEvents.registry('irons_spellbooks:spells', event =&gt; {
 Componentを含んだArrayを返す必要があります。
 <strong>casterがnullの場合を考慮してください。</strong>魔法書に魔法を入れるときにnullになります。<br />
 <code>Component.blue(Text.translate("spell.riiimc.magic_info"))</code>このように記載することで、翻訳キーを入れることもできます。  </p>
-<h2 id="_3">仕上げ</h2>
+<h2 id="_4">仕上げ</h2>
 <p>さて、これで君だけのオリジナル魔法が動きます！しかし、名前が"spell.kubejs.spell_name"になっていることにお気づきでしょう。Modやデータパック、リソパの制作に携わったことのある方はご存知かもしれませんが、これは翻訳キーが書いてあります。そうです、最後に魔法の日本語名を決める必要があります。<br />
 <code>assets</code>フォルダを開き、さらに<code>kubejs</code>フォルダを開いてください。中にtexturesフォルダがあると思いますがそれは気にせず、新たに<code>lang</code>フォルダを作成してください。そしてその中に<code>ja_jp.json</code>と<code>en_us.json</code>をそれぞれ作成してください。画像は後で貼ります。<br />
 <code>ja_jp.json</code>と<code>en_us.json</code>をそれぞれ開いてください。そして、以下のようにかいてください。<br />
