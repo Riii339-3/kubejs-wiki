@@ -6,7 +6,7 @@
 ```js
 // StartupScripts
 StartupEvents.registry('irons_spellbooks:spells', event => {
-	event.create('heal')                          // 作成したい魔法のid(文字列表記/小文字英数字&ハイフン、アンダーアーマーのみ使用可)
+	event.create('super_heal')                          // 作成したい魔法のid(文字列表記/小文字英数字&ハイフン、アンダーアーマーのみ使用可)
 		.setCastTime(20)                           // 発動時間(tick表記)
 		.setCooldownSeconds(30)                    // クールタイム(秒表記)
         .setBaseManaCost(50)                       // 基本的なマナコスト(整数表記)
@@ -34,7 +34,7 @@ StartupEvents.registry('irons_spellbooks:spells', event => {
 })
 ```  
 これは自分自身を魔法レベル × 2分回復する魔法です。  
-このコードをStartupScriptsに置いて、マインクラフトを起動してください。そうすると、spell.kubejs.heal のスクロールがあると思います。  
+このコードをStartupScriptsに置いて、マインクラフトを起動してください。そうすると、spell.kubejs.super_heal のスクロールがあると思います。  
 では、それぞれのメゾットを詳しく見ていきましょう。  
 
 ## setCastType()
