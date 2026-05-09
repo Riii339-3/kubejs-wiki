@@ -34,7 +34,7 @@ StartupEvents.registry('irons_spellbooks:spells', event => {
 })
 ```  
 これは自分自身を魔法レベル × 2分回復する魔法です。  
-このコードをStartupScriptsに置いて、マインクラフトを起動してください。そうすると、spell.kubejs.super_heal のスクロールがあると思います。  
+このコードをStartupScriptsに置いて、マインクラフトを起動してください。そうすると、spell.kubejs.super_heal のスクロールがあると思います。名前がおかしいのは大丈夫です、後々直します。  
 では、それぞれのメゾットを詳しく見ていきましょう。  
 
 ## setCastType()
@@ -76,19 +76,19 @@ Componentを含んだArrayを返す必要があります。
 `Component.blue(Text.translate("spell.riiimc.magic_info"))`このように記載することで、翻訳キーを入れることもできます。  
 
 ## 仕上げ
-さて、これで君だけのオリジナル魔法が動きます！しかし、名前が"spell.kubejs.spell_name"になっていることにお気づきでしょう。Modやデータパック、リソパの制作に携わったことのある方はご存知かもしれませんが、これは翻訳キーが書いてあります。そうです、最後に魔法の日本語名を決める必要があります。  
+さて、これで君だけのオリジナル魔法が動きます！しかし、名前が"spell.kubejs.super_heal"になっていることにお気づきでしょう。Modやデータパック、リソパの制作に携わったことのある方はご存知かもしれませんが、これは翻訳キーが書いてあります。そうです、最後に魔法の日本語名を決める必要があります。  
 `assets`フォルダを開き、さらに`kubejs`フォルダを開いてください。中にtexturesフォルダがあると思いますがそれは気にせず、新たに`lang`フォルダを作成してください。そしてその中に`ja_jp.json`と`en_us.json`をそれぞれ作成してください。画像は後で貼ります。  
 `ja_jp.json`と`en_us.json`をそれぞれ開いてください。そして、以下のようにかいてください。  
 `assets/kubejs/lang/ja_jp.json`  
 ```json
 {
-    "spell.kubejs.your_spell_id": "日本語での魔法名"
+    "spell.kubejs.super_heal": "すごいヒール"
 }
 ```  
 `assets/kubejs/lang/en_us.json`  
 ```json
 {
-    "spell.kubejs.your_spell_id": "英語での魔法名"
+    "spell.kubejs.super_heal": "Super Heal"
 }
 ```   
 なぜ英語が必要か、それは英語がデフォルト言語だからです。もし使用者がフランス語でマイクラを起動した際、日本語だけだと翻訳キーが表示されてしまいます。しかし、英語も記載しておけば翻訳キーではなく**英語での魔法名**が表示されるのです。  
