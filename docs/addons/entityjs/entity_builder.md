@@ -14,5 +14,11 @@ EntityJSが対応している種類は以下の通りです。
 - `"entityjs:projectile"`: ProjectileEntity、つまり飛翔体エンティティです。  
 - `"entityjs:geckolib_projectile"`: GeckoLibのモデルを持つ飛翔体エンティティです。  
 
-また、これら以外にも`"entityjs:nonliving"`と`'entityjs:living'`があります。これらはテンプレートに従っていない、完全新規のエンティティです。ただし、これらを扱うには高度な知識を求められます。  
-では、それぞれのエンティティについて見てみましょう。  
+また、上記以外にも`"entityjs:nonliving"`と`'entityjs:living'`があります。これらはテンプレートに従っていない、完全新規のエンティティタイプです。ただし、扱うには高度な知識を求められます。  
+このセクションでは、PathfinderMobを作成していきます。  
+
+## 実際のコード
+```js
+TODO("待っててね")
+```  
+では、それぞれのメゾットについて解説していきます。  

@@ -73,24 +73,25 @@ StartupEvents.registry('irons_spellbooks:spells', event => {
 魔法の説明をツールチップに書きます。  
 Componentを含んだArrayを返す必要があります。
 **casterがnullの場合を考慮してください。**魔法書に魔法を入れるときにnullになります。  
-`Component.blue(Text.translate("spell.riiimc.magic_info"))`このように記載することで、翻訳キーを入れることもできます。  
+`Component.blue(Text.translate("spell.kubejs.super_heal.tooltip"))`このように記載することで、翻訳キーを入れることもできます。  
 
 ## 仕上げ
-さて、これで君だけのオリジナル魔法が動きます！しかし、名前が"spell.kubejs.super_heal"になっていることにお気づきでしょう。Modやデータパック、リソパの制作に携わったことのある方はご存知かもしれませんが、これは翻訳キーが書いてあります。そうです、最後に魔法の日本語名を決める必要があります。  
-`assets`フォルダを開き、さらに`kubejs`フォルダを開いてください。中にtexturesフォルダがあると思いますがそれは気にせず、新たに`lang`フォルダを作成してください。そしてその中に`ja_jp.json`と`en_us.json`をそれぞれ作成してください。画像は後で貼ります。  
-`ja_jp.json`と`en_us.json`をそれぞれ開いてください。そして、以下のようにかいてください。  
-`assets/kubejs/lang/ja_jp.json`  
+最後に、魔法名と魔法の詳細な説明文を書く必要があります。以下の場所にそれぞれのファイルを作成して、コピペして貼り付けてください。
+`./assets/kubejs/lang/ja_jp.json`  
 ```json
 {
-    "spell.kubejs.super_heal": "すごいヒール"
+    "spell.kubejs.super_heal": "すごいヒール",
+	"spell.kubejs.super_heal.info": "とても強い回復魔法"
 }
 ```  
-`assets/kubejs/lang/en_us.json`  
+`./assets/kubejs/lang/en_us.json`  
 ```json
 {
-    "spell.kubejs.super_heal": "Super Heal"
+    "spell.kubejs.super_heal": "Super Heal",
+	"spell.kubejs.super_heal": "Totemo Tuyoi Heal Magic"
 }
 ```   
-なぜ英語が必要か、それは英語がデフォルト言語だからです。もし使用者がフランス語でマイクラを起動した際、日本語だけだと翻訳キーが表示されてしまいます。しかし、英語も記載しておけば翻訳キーではなく**英語での魔法名**が表示されるのです。  
-さて、あとは魔法のアイコンだけです。`assets/kubejs/`を開き、先ほどスルーした`textures`を開いてください。おそらく`block`と`item`があります。今回はこの2つは関係ないので`gui`フォルダを作成し、その中にさらに`spell_icons`フォルダを作成します。そして、その中に**魔法のidと全く同じpng形式の画像ファイル**を置いてください。  
+ここで疑問点を持った方がいらっしゃるでしょう、「なんで英語名も書かないといけないんだ？」と。  
+それは、マイクラのデフォルト言語が英語だからです。もしあなたのスクリプトをフランス人が使うとして、日本語だけの場合最初の翻訳キーが表示されてしまいます。ちゃんと英語名も書きましょう。  
+さて、あとは魔法のアイコンだけです。アイコン画像は`./assets/kubejs/textures/gui/spell_icons/super_heal.png`に置いてください。**アイテムやブロックのように自由にパスを指定できないため注意してください。**  
 さて、ここまででうまくいっていれば君だけのオリジナル魔法が完成します！おめでとう！！！
