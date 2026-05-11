@@ -15,7 +15,7 @@ nav:
     - EntityJS:
       - 概要: addons/entityjs/index.md
       - EntityTypeの作成: addons/entityjs/entity_builder.md
-      - 既存のエンティティを複製; addons/entityjs/clone_entity.md
+      - 既存のエンティティを複製: addons/entityjs/clone_entity.md
       - Iron's Spellsとの連携: addons/entityjs/iss_compat.md
     - ProbeJS:
       - 概要: addons/probejs/index.md
