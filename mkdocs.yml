@@ -9,9 +9,12 @@ nav:
     - 最初のブロックを作成する: tutorials/first_block.md
     - 最初の独自レシピを作成する: tutorials/first_recipe.md
   - アドオン解説:
+    - Ponder for KubeJS:
+      - 概要: addons/ponder/index.md
     - KubeJS Iron's Spells:
       - 概要: addons/iss/index.md
       - 最初の魔法を作成する: addons/iss/first_magic.md
+      - 最初の魔法タイプを作成する: addons/iss/first_school.md
     - EntityJS:
       - 概要: addons/entityjs/index.md
       - EntityTypeの作成: addons/entityjs/entity_builder.md
