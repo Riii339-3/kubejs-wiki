@@ -1,7 +1,8 @@
 # KubeJS Iron's Spells
+古来から伝わる魔法技術に革命がもたらされます…
 
 ## はじめに
-KubeJS Iron's SpellsはKubeJSを使って、Iron's Spellbooksの要素を作成・編集できるModです。  
+KubeJS Iron's SpellsはKubeJSを使って、Iron's Spellbooksの要素を作成・編集できるアドオンです。  
 主に以下のことができます  
 - 独自の魔法・種類の作成  
 - 魔法書、杖の作成  
