@@ -93,6 +93,10 @@
 </li>
             
 <li>
+    <a href="../../entityjs/clone_entity/" class="dropdown-item">既存のエンティティを複製</a>
+</li>
+            
+<li>
     <a href="../../entityjs/iss_compat/" class="dropdown-item">Iron's Spellsとの連携</a>
 </li>
     </ul>
@@ -279,21 +283,22 @@ StartupEvents.registry('irons_spellbooks:spells', event =&gt; {
 <p>魔法の説明をツールチップに書きます。<br />
 Componentを含んだArrayを返す必要があります。
 <strong>casterがnullの場合を考慮してください。</strong>魔法書に魔法を入れるときにnullになります。<br />
-<code>Component.blue(Text.translate("spell.riiimc.magic_info"))</code>このように記載することで、翻訳キーを入れることもできます。  </p>
+<code>Component.blue(Text.translate("spell.kubejs.super_heal.tooltip"))</code>このように記載することで、翻訳キーを入れることもできます。  </p>
 <h2 id="_4">仕上げ</h2>
-<p>さて、これで君だけのオリジナル魔法が動きます！しかし、名前が"spell.kubejs.super_heal"になっていることにお気づきでしょう。Modやデータパック、リソパの制作に携わったことのある方はご存知かもしれませんが、これは翻訳キーが書いてあります。そうです、最後に魔法の日本語名を決める必要があります。<br />
-<code>assets</code>フォルダを開き、さらに<code>kubejs</code>フォルダを開いてください。中にtexturesフォルダがあると思いますがそれは気にせず、新たに<code>lang</code>フォルダを作成してください。そしてその中に<code>ja_jp.json</code>と<code>en_us.json</code>をそれぞれ作成してください。画像は後で貼ります。<br />
-<code>ja_jp.json</code>と<code>en_us.json</code>をそれぞれ開いてください。そして、以下のようにかいてください。<br />
-<code>assets/kubejs/lang/ja_jp.json</code><br />
+<p>最後に、魔法名と魔法の詳細な説明文を書く必要があります。以下の場所にそれぞれのファイルを作成して、コピペして貼り付けてください。
+<code>./assets/kubejs/lang/ja_jp.json</code><br />
 <pre class="highlight"><code class="language-json">{
-    "spell.kubejs.super_heal": "すごいヒール"
+    "spell.kubejs.super_heal": "すごいヒール",
+	"spell.kubejs.super_heal.info": "とても強い回復魔法"
 }</code></pre>
-<code>assets/kubejs/lang/en_us.json</code><br />
+<code>./assets/kubejs/lang/en_us.json</code><br />
 <pre class="highlight"><code class="language-json">{
-    "spell.kubejs.super_heal": "Super Heal"
+    "spell.kubejs.super_heal": "Super Heal",
+	"spell.kubejs.super_heal": "Totemo Tuyoi Heal Magic"
 }</code></pre>
-なぜ英語が必要か、それは英語がデフォルト言語だからです。もし使用者がフランス語でマイクラを起動した際、日本語だけだと翻訳キーが表示されてしまいます。しかし、英語も記載しておけば翻訳キーではなく<strong>英語での魔法名</strong>が表示されるのです。<br />
-さて、あとは魔法のアイコンだけです。<code>assets/kubejs/</code>を開き、先ほどスルーした<code>textures</code>を開いてください。おそらく<code>block</code>と<code>item</code>があります。今回はこの2つは関係ないので<code>gui</code>フォルダを作成し、その中にさらに<code>spell_icons</code>フォルダを作成します。そして、その中に<strong>魔法のidと全く同じpng形式の画像ファイル</strong>を置いてください。<br />
+ここで疑問点を持った方がいらっしゃるでしょう、「なんで英語名も書かないといけないんだ？」と。<br />
+それは、マイクラのデフォルト言語が英語だからです。もしあなたのスクリプトをフランス人が使うとして、日本語だけの場合最初の翻訳キーが表示されてしまいます。ちゃんと英語名も書きましょう。<br />
+さて、あとは魔法のアイコンだけです。アイコン画像は<code>./assets/kubejs/textures/gui/spell_icons/super_heal.png</code>に置いてください。<strong>アイテムやブロックのように自由にパスを指定できないため注意してください。</strong><br />
 さて、ここまででうまくいっていれば君だけのオリジナル魔法が完成します！おめでとう！！！</p></div>
             </div>
         </div>
