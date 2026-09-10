@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>最初の魔法を作成する - KubeJS 日本語Wiki (非公式)</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../css/version-select.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">KubeJS 日本語Wiki (非公式)</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">ホーム</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">チュートリアル</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../tutorials/install/" class="dropdown-item">KubeJSのインストール</a>
+</li>
+                                    
+<li>
+    <a href="../../../tutorials/basic/" class="dropdown-item">基礎知識</a>
+</li>
+                                    
+<li>
+    <a href="../../../tutorials/first_item/" class="dropdown-item">最初のアイテムを作成する</a>
+</li>
+                                    
+<li>
+    <a href="../../../tutorials/first_block/" class="dropdown-item">最初のブロックを作成する</a>
+</li>
+                                    
+<li>
+    <a href="../../../tutorials/first_recipe/" class="dropdown-item">最初の独自レシピを作成する</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">アドオン解説</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ponder for KubeJS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../ponder/" class="dropdown-item">概要</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">KubeJS Iron's Spells</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">概要</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">最初の魔法を作成する</a>
+</li>
+            
+<li>
+    <a href="../first_school/" class="dropdown-item">最初の魔法タイプを作成する</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">EntityJS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../entityjs/" class="dropdown-item">概要</a>
+</li>
+            
+<li>
+    <a href="../../entityjs/entity_builder/" class="dropdown-item">EntityTypeの作成</a>
+</li>
+            
+<li>
+    <a href="../../entityjs/clone_entity/" class="dropdown-item">既存のエンティティを複製</a>
+</li>
+            
+<li>
+    <a href="../../entityjs/iss_compat/" class="dropdown-item">Iron's Spellsとの連携</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ProbeJS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../probejs/" class="dropdown-item">概要</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">KubeLoader</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../kubeloader/" class="dropdown-item">概要</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ClassJS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../classjs/" class="dropdown-item">概要</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">KubeJS Goety</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../goety/" class="dropdown-item">概要</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../first_school/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">最初の魔法を作成する</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">はじめに</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">実際のコード</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#setcasttype" class="nav-link">setCastType()</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#setminrarity" class="nav-link">setMinRarity()</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#oncast" class="nav-link">onCast()</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#setuniqueinfo" class="nav-link">setUniqueInfo()</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">仕上げ</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">最初の魔法を作成する</h1>
+<h2 id="_2">はじめに</h2>
+<p>このセクションでは実際に動作するコードを紐解きながら、どのようにして魔法を作成しているかを解説していきます  </p>
+<h2 id="_3">実際のコード</h2>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// StartupScripts</span>
+<span class="nx">StartupEvents</span><span class="p">.</span><span class="nx">registry</span><span class="p">(</span><span class="s1">&#39;irons_spellbooks:spells&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">event</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="nx">event</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="s1">&#39;super_heal&#39;</span><span class="p">)</span><span class="w">                          </span><span class="c1">// 作成したい魔法のid(文字列表記/小文字英数字&amp;ハイフン、アンダーアーマーのみ使用可)</span>
+<span class="w">		</span><span class="p">.</span><span class="nx">setCastTime</span><span class="p">(</span><span class="mf">20</span><span class="p">)</span><span class="w">                           </span><span class="c1">// 発動時間(tick表記)</span>
+<span class="w">		</span><span class="p">.</span><span class="nx">setCooldownSeconds</span><span class="p">(</span><span class="mf">30</span><span class="p">)</span><span class="w">                    </span><span class="c1">// クールタイム(秒表記)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">setBaseManaCost</span><span class="p">(</span><span class="mf">50</span><span class="p">)</span><span class="w">                       </span><span class="c1">// 基本的なマナコスト(整数表記)</span>
+<span class="w">		</span><span class="p">.</span><span class="nx">setManaCostPerLevel</span><span class="p">(</span><span class="mf">30</span><span class="p">)</span><span class="w">                   </span><span class="c1">// レベルごとに上がるマナコスト(整数表記)</span>
+<span class="w">		</span><span class="p">.</span><span class="nx">setCastType</span><span class="p">(</span><span class="s1">&#39;long&#39;</span><span class="p">)</span><span class="w">                       </span><span class="c1">// 魔法発動の種類。詳細は以下に記載。</span>
+<span class="w">		</span><span class="p">.</span><span class="nx">setSchool</span><span class="p">(</span><span class="s1">&#39;irons_spellbooks:blood&#39;</span><span class="p">)</span><span class="w">       </span><span class="c1">// 魔法のタイプ選択(id表記)</span>
+<span class="w">		</span><span class="p">.</span><span class="nx">setMinRarity</span><span class="p">(</span><span class="s1">&#39;rare&#39;</span><span class="p">)</span><span class="w">                      </span><span class="c1">// 魔法の最小レアリティ。詳細は以下に記載。</span>
+<span class="w">		</span><span class="p">.</span><span class="nx">setMaxLevel</span><span class="p">(</span><span class="mf">5</span><span class="p">)</span><span class="w">                            </span><span class="c1">// 最大レベル(整数表記)</span>
+<span class="w">		</span><span class="p">.</span><span class="nx">setStartSound</span><span class="p">(</span><span class="s1">&#39;item.honey_bottle.drink&#39;</span><span class="p">)</span><span class="w">  </span><span class="c1">// 魔法を発動し始めた際に鳴らすサウンド。ロング魔法で使用(id表記)</span>
+<span class="w">		</span><span class="p">.</span><span class="nx">setFinishSound</span><span class="p">(</span><span class="s1">&#39;item.honey_bottle.drink&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// 魔法が発動し終わった際に鳴らすサウンド(id表記)</span>
+<span class="w">		</span><span class="p">.</span><span class="nx">onCast</span><span class="p">(</span><span class="nx">ctx</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="kd">const</span><span class="w"> </span><span class="nx">entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">entity</span>
+<span class="w">			</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">entity</span><span class="p">)</span><span class="w"> </span><span class="k">return</span>
+<span class="w">			</span><span class="nx">entity</span><span class="p">.</span><span class="nx">heal</span><span class="p">(</span><span class="nx">ctx</span><span class="p">.</span><span class="nx">getSpellLevel</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span>
+<span class="w">		</span><span class="p">})</span><span class="w">                         </span><span class="c1">// 魔法を発動した際に行うこと。主にここでコードを記載する。詳細は以下に記載。</span>
+<span class="w">		</span><span class="p">.</span><span class="nx">setAllowLooting</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w">                     </span><span class="c1">// 魔法がルートから出現するかどうか。trueで出現、falseでなし。</span>
+<span class="w">		</span><span class="p">.</span><span class="nx">needsLearning</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span><span class="w">                      </span><span class="c1">// 魔法を学ぶ必要があるかどうか。エルドリッチ魔法専用。</span>
+<span class="w">		</span><span class="p">.</span><span class="nx">canBeCraftedBy</span><span class="p">(</span><span class="nx">player</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w">            </span><span class="c1">// プレイヤーが魔法をクラフトできるかどうか。一定条件下においてクラフト可もできる。</span>
+<span class="w">		</span><span class="p">.</span><span class="nx">setUniqueInfo</span><span class="p">((</span><span class="nx">spellLevel</span><span class="p">,</span><span class="w"> </span><span class="nx">caster</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// 魔法についての説明をツールチップに記載する。Arrayを返す(詳細は下記)</span>
+<span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="p">[</span>
+<span class="w">	 			</span><span class="nx">Component</span><span class="p">.</span><span class="nx">darkGreen</span><span class="p">(</span><span class="sb">`回復量: </span><span class="si">${</span><span class="nx">spellLevel</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+<span class="w">			</span><span class="p">]</span>
+<span class="w">		</span><span class="p">})</span>
+
+<span class="p">})</span>
+</code></pre></div>
+これは自分自身を魔法レベル × 2分回復する魔法です。<br />
+このコードをStartupScriptsに置いて、マインクラフトを起動してください。そうすると、spell.kubejs.super_heal のスクロールがあると思います。名前がおかしいのは大丈夫です、後々直します。<br />
+では、それぞれのメゾットを詳しく見ていきましょう。  </p>
+<h2 id="setcasttype">setCastType()</h2>
+<p>魔法の発動タイプを選択します。<br />
+以下のいずれかを選択する必要があります<br />
+- <code>'continuous'</code>: 継続して発動します。<br />
+- <code>'long'</code>: 長い詠唱を行います。<br />
+- <code>'instant'</code>: 即座に発動します。<br />
+- <code>'none'</code>: よくわかりません。後でソースコード読みます。  </p>
+<h2 id="setminrarity">setMinRarity()</h2>
+<p>魔法の最小レアリティを設定します。<br />
+以下のいずれかを選択する必要があります。<br />
+- <code>"common"</code>: コモン<br />
+- <code>"uncommon"</code>: アンコモン<br />
+- <code>"rare"</code>: レア<br />
+- <code>"epic"</code>: エピック<br />
+- <code>"legendary"</code>: レジェンダリー  </p>
+<h2 id="oncast">onCast()</h2>
+<p>魔法が発動された際の動作を決定します。<br />
+だいたいここでどのような魔法になるかが決定します。<br />
+<code>ctx</code>はコンテキストオブジェクトです。この中にentityやspellLevelなどがあります。<br />
+- <code>ctx.entity</code> = 発動者<br />
+- <code>ctx.spellLevel</code> = 発動した魔法のレベル<br />
+- <code>ctx.level</code> = 発動したlevel<br />
+…他にも絶対ありますが、私が知らないので覚えたら書きます。許して。<br />
+今回の魔法では、spellLevel × 2の体力を回復しています。詳しく見ていきましょう。  </p>
+<p>まず、<code>const entity = ctx.entity</code>で発動者を取得します。<br />
+次に、<code>if (!entity) return</code>で、<strong>entityがnullの時を除外</strong>します。nullチェックは大事。<br />
+最後に、<code>entity.heal(ctx.getSpellLevel() * 2)</code>でentityを回復します。<code>heal(number)</code>が回復部分で、引数に回復量を入れます。今回の場合、<code>getSpellLevel()</code>で取得した魔法レベルに2を掛けた値を入れています。<br />
+この部分は自由に書けます。例えば、<code>entity.potionEffects.add("minecraft:resistance", 200, ctx.getSpellLevel())</code>用に書けば、耐性を魔法レベル分<strong>10秒間</strong>付与します。<code>potionEffects.add()</code>の効果時間は<strong>Tick</strong>です。  </p>
+<h2 id="setuniqueinfo">setUniqueInfo()</h2>
+<p>魔法の説明をツールチップに書きます。<br />
+Componentを含んだArrayを返す必要があります。
+<strong>casterがnullの場合を考慮してください。</strong>魔法書に魔法を入れるときにnullになります。<br />
+<code>Component.blue(Text.translate("spell.kubejs.super_heal.tooltip"))</code>このように記載することで、翻訳キーを入れることもできます。  </p>
+<h2 id="_4">仕上げ</h2>
+<p>最後に、魔法名と魔法の詳細な説明文を書く必要があります。以下の場所にそれぞれのファイルを作成して、コピペして貼り付けてください。
+<code>./assets/kubejs/lang/ja_jp.json</code><br />
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;spell.kubejs.super_heal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;すごいヒール&quot;</span><span class="p">,</span>
+<span class="w">	</span><span class="nt">&quot;spell.kubejs.super_heal.info&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;とても強い回復魔法&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<code>./assets/kubejs/lang/en_us.json</code><br />
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;spell.kubejs.super_heal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Super Heal&quot;</span><span class="p">,</span>
+<span class="w">	</span><span class="nt">&quot;spell.kubejs.super_heal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Totemo Tuyoi Heal Magic&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+ここで疑問点を持った方がいらっしゃるでしょう、「なんで英語名も書かないといけないんだ？」と。<br />
+それは、マイクラのデフォルト言語が英語だからです。もしあなたのスクリプトをフランス人が使うとして、日本語だけの場合最初の翻訳キーが表示されてしまいます。ちゃんと英語名も書きましょう。<br />
+さて、あとは魔法のアイコンだけです。アイコン画像は<code>./assets/kubejs/textures/gui/spell_icons/super_heal.png</code>に置いてください。<strong>アイテムやブロックのように自由にパスを指定できないため注意してください。</strong><br />
+さて、ここまででうまくいっていれば君だけのオリジナル魔法が完成します！おめでとう！！！</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+        <script src="../../../js/version-select.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
